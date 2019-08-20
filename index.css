@@ -20,10 +20,15 @@
     width: 90%;
     height: 20%;
     background-color: white;
+    text-align: right;
+    font-size: 55px;
 }
 .display-row{
     width: 100%;
     flex: 1 0 0;
+}
+.display-row p{
+    margin-right: 10px;
 }
 .button-grid{
     position: relative;
@@ -41,10 +46,17 @@
 .button{
     flex: 1 0 0;
     height: 100%;
-    background-color: grey;
+    background-color: rgb(128, 128, 128);
     border: 1px solid black;
     text-align: center;
     font-size: 50px;
+}
+.button:hover{
+    background-color: white;
+}
+.button:active{
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
 }
 .button p{
     margin-top: 17%;
