@@ -22,25 +22,41 @@ const buttonClear = document.getElementById("clear-button");
 
 //active value variables
 let firstValue;
-let firstValueString;
+let firstValueString = "";
 let secondValue;
-let secondValueString;
+let secondValueString = "";
 let currentOperator = null;
 
 //display variables
 const displayLine1 = document.getElementById("display-line-1-value");
 const displayLine2 = document.getElementById("display-line-2-value");
 
+function updateDisplay(){
+    displayLine1.textContent = firstValueString;
+    displayLine2.textContent = secondValueString;
+}
+
 function clearSystem(){
     firstValue = null;
-    firstValueString = null;
+    firstValueString = "";
     secondValue = null;
-    secondValueString = null;
+    secondValueString = "";
     currentOperator = null;
+    updateDisplay();
 }
  function numberPressed(inputNumber){
     let inputString = inputNumber.toString();
-    
+    secondValueString += inputString;
+    updateDisplay();
+}
+function operatorPressed(inputOperator){
+    firstValueString = secondValueString;
+    secondValueString = "";
+    firstValueString += " " + inputOperator;
+    if(currentOperator !=null){
+        evaluate(firstValue, currentOperator, secondValue);
+    }
+    currentOperator = inputOperator;
 }
 
 button0.addEventListener("click", function(){numberPressed(0);});
@@ -55,3 +71,8 @@ button8.addEventListener("click", function(){numberPressed(8);});
 button9.addEventListener("click", function(){numberPressed(9);});
 
 buttonClear.addEventListener("click", function(){clearSystem();});
+
+buttonAdd.addEventListener("click", function(){operatorPressed("+");});
+buttonSubtract.addEventListener("click", function(){operatorPressed("-");});
+buttonMultiply.addEventListener("click", function(){operatorPressed("*");});
+buttonDivide.addEventListener("click", function(){operatorPressed("/");});
