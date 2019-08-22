@@ -129,6 +129,7 @@ function clearSystem(){
     secondValue = null;
     secondValueString = "";
     currentOperator = null;
+    decimalPointPresent = false;
     updateDisplay();
 }
  function numberPressed(inputNumber){
@@ -169,6 +170,7 @@ function addDecimalPoint(){
     if(decimalPointPresent == false){
         secondValueString += ".";
     }
+    updateDisplay();
 }
 
 //Adds events for each button
