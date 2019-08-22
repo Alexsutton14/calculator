@@ -140,6 +140,10 @@ function clearSystem(){
     if(secondValueString === "ERROR"){
          clearSystem();
     }
+    //clears system if last action was Equals, prevents adding on to output
+    if(lastInput === "="){
+        clearSystem();
+    }
     let inputString = inputNumber.toString();
     secondValueString += inputString;
     updateDisplay();
@@ -158,7 +162,7 @@ function operatorPressed(inputOperator){
 
 function equalsPressed(){
     //prevents multiple presses of equals
-    if(currentOperator == null){
+    if(lastInput === "="){
         return null;
     }
     lastInput = "=";
@@ -184,6 +188,8 @@ function backspace(){
         return
     }
     secondValueString = secondValueString.slice(0, -1);
+    lastInput = "backspace";
+    updateDisplay();
 }
 
 //Adds events for each button
