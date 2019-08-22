@@ -207,75 +207,74 @@ buttonBackspace.addEventListener("click", backspace());
 document.addEventListener("keydown", function(event){
     console.log("keydown " + event.keyCode);
     if(event.keyCode === 13){
-        console.log("enter pressed");
         //Enter
         equalsPressed();
     }
-    if(event.keycode === 46){
-        console.log("delete pressed");
+    if(event.keyCode === 46){
         //Delete
         clearSystem();
     }
-    if(event.keycode === 8){
+    if(event.keyCode === 8){
         //Backspace
+        backspace();
     }
-    if(event.keycode === 106){
+    if(event.keyCode === 106){
         //Multiply
         operatorPressed("*");
     }
-    if(event.keycode === 107){
+    if(event.keyCode === 107){
         //Add
         operatorPressed("+");
     }
-    if(event.keycode === 109){
+    if(event.keyCode === 109){
         //Subtract
         operatorPressed("-");
     }
-    if(event.keycode === 111){
+    if(event.keyCode === 111){
         //Divide
         operatorPressed("/");
     }
-    if(event.keycode === 110 || event.keycode === 190){
+    if(event.keyCode === 110 || event.keyCode === 190){
         //Decimal Point
         addDecimalPoint();
     }
-    if(event.keycode === 48 || event.keycode === 96){
+    if(event.keyCode === 48 || event.keyCode === 96){
         //0
         numberPressed(0);
     }
-    if(event.keycode === 49 || event.keycode === 97){
+    if(event.keyCode === 49 || event.keyCode === 97){
         //1
         numberPressed(1);
     }
-    if(event.keycode === 50 || event.keycode === 98){
+    if(event.keyCode === 50 || event.keyCode === 98){
         //2
         numberPressed(2);
     }
-    if(event.keycode === 51 || event.keycode === 99){
+    if(event.keyCode === 51 || event.keyCode === 99){
         //3
         numberPressed(3);
     }
-    if(event.keycode === 52 || event.keycode === 100){
+    if(event.keyCode === 52 || event.keyCode === 100){
         //4
         numberPressed(4);
     }
-    if(event.keycode === 53 || event.keycode === 101){
+    if(event.keyCode === 53 || event.keyCode === 101){
         //5
         numberPressed(5);
     }
-    if(event.keycode === 54 || event.keycode === 102){
+    if(event.keyCode === 54 || event.keyCode === 102){
         //6
         numberPressed(6);
     }
-    if(event.keycode === 55 || event.keycode === 103){
+    if(event.keyCode === 55 || event.keyCode === 103){
         //7
         numberPressed(7);
     }
-    if(event.keycode === 56 || event.keycode === 104){
+    if(event.keyCode === 56 || event.keyCode === 104){
         //8
         numberPressed(8);
     }
-    if(event.keycode === 57 || event.keycode === 105){
+    if(event.keyCode === 57 || event.keyCode === 105){
         //9
         numberPressed(9);
     }
