@@ -28,6 +28,7 @@ let secondValue;
 let secondValueString = "";
 let currentOperator = null;
 let decimalPointPresent = false;
+let lastInput;
 
 //display variables
 const displayLine1 = document.getElementById("display-line-1-value");
@@ -134,6 +135,7 @@ function clearSystem(){
     updateDisplay();
 }
  function numberPressed(inputNumber){
+     lastInput = inputNumber;
     //clears system first if previous result was ERROR
     if(secondValueString === "ERROR"){
          clearSystem();
@@ -143,6 +145,7 @@ function clearSystem(){
     updateDisplay();
 }
 function operatorPressed(inputOperator){
+    lastInput = inputOperator;
     //Moves input to top line
     firstValueString = secondValueString;
     //clears bottom line
@@ -158,6 +161,7 @@ function equalsPressed(){
     if(currentOperator == null){
         return null;
     }
+    lastInput = "=";
     evaluate(firstValueString, currentOperator, secondValueString);
     currentOperator = null;
     decimalPointPresent = false;
@@ -169,6 +173,7 @@ function addDecimalPoint(){
         decimalPointPresent = true;
     }
     if(decimalPointPresent === false){
+        lastInput = "."
         secondValueString += ".";
         decimalPointPresent = true;
     }
