@@ -168,7 +168,7 @@ function addDecimalPoint(){
         secondValueString = "0.";
         decimalPointPresent = true;
     }
-    if(decimalPointPresent == false){
+    if(decimalPointPresent === false){
         secondValueString += ".";
     }
     updateDisplay();
@@ -205,74 +205,77 @@ buttonBackspace.addEventListener("click", backspace());
 
 //keyboard commands
 document.addEventListener("keydown", function(event){
-    if(event.keyCode == 13){
+    console.log("keydown " + event.keyCode);
+    if(event.keyCode === 13){
+        console.log("enter pressed");
         //Enter
         equalsPressed();
     }
-    if(event.keycode == 46){
+    if(event.keycode === 46){
+        console.log("delete pressed");
         //Delete
         clearSystem();
     }
-    if(event.keycode == 8){
+    if(event.keycode === 8){
         //Backspace
     }
-    if(event.keycode == 106){
+    if(event.keycode === 106){
         //Multiply
         operatorPressed("*");
     }
-    if(event.keycode == 107){
+    if(event.keycode === 107){
         //Add
         operatorPressed("+");
     }
-    if(event.keycode == 109){
+    if(event.keycode === 109){
         //Subtract
         operatorPressed("-");
     }
-    if(event.keycode == 111){
+    if(event.keycode === 111){
         //Divide
         operatorPressed("/");
     }
-    if(event.keycode == 110 || event.keycode == 190){
+    if(event.keycode === 110 || event.keycode === 190){
         //Decimal Point
         addDecimalPoint();
     }
-    if(event.keycode == 48 || event.keycode == 96){
+    if(event.keycode === 48 || event.keycode === 96){
         //0
         numberPressed(0);
     }
-    if(event.keycode == 49 || event.keycode == 97){
+    if(event.keycode === 49 || event.keycode === 97){
         //1
         numberPressed(1);
     }
-    if(event.keycode == 50 || event.keycode == 98){
+    if(event.keycode === 50 || event.keycode === 98){
         //2
         numberPressed(2);
     }
-    if(event.keycode == 51 || event.keycode == 99){
+    if(event.keycode === 51 || event.keycode === 99){
         //3
         numberPressed(3);
     }
-    if(event.keycode == 52 || event.keycode == 100){
+    if(event.keycode === 52 || event.keycode === 100){
         //4
         numberPressed(4);
     }
-    if(event.keycode == 53 || event.keycode == 101){
+    if(event.keycode === 53 || event.keycode === 101){
         //5
         numberPressed(5);
     }
-    if(event.keycode == 54 || event.keycode == 102){
+    if(event.keycode === 54 || event.keycode === 102){
         //6
         numberPressed(6);
     }
-    if(event.keycode == 55 || event.keycode == 103){
+    if(event.keycode === 55 || event.keycode === 103){
         //7
         numberPressed(7);
     }
-    if(event.keycode == 56 || event.keycode == 104){
+    if(event.keycode === 56 || event.keycode === 104){
         //8
         numberPressed(8);
     }
-    if(event.keycode == 57 || event.keycode == 105){
+    if(event.keycode === 57 || event.keycode === 105){
         //9
         numberPressed(9);
     }
