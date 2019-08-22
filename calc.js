@@ -170,6 +170,7 @@ function addDecimalPoint(){
     }
     if(decimalPointPresent === false){
         secondValueString += ".";
+        decimalPointPresent = true;
     }
     updateDisplay();
 }
