@@ -18,7 +18,7 @@
         margin: auto;
         margin-top: 5%;
         width: 90%;
-        height: 20vh;
+        height: 10vh;
         background-color: white;
         text-align: right;
         font-size: 30px;
@@ -34,8 +34,7 @@
         position: relative;
         width: 90%;
         height: 70%;
-        margin: auto;
-        margin-top: 5%;
+        margin: 5% auto 5% auto;
         background-color: white;
     }
     .button-row{

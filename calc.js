@@ -185,6 +185,7 @@ function addDecimalPoint(){
 }
 function backspace(){
     if(secondValueString === ""){
+        console.log("Cannot backspace - string empty");
         return
     }
     secondValueString = secondValueString.slice(0, -1);
