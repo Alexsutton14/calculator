@@ -184,6 +184,7 @@ function addDecimalPoint(){
     updateDisplay();
 }
 function backspace(){
+    console.log("backspace pressed");
     if(secondValueString === ""){
         console.log("Cannot backspace - string empty");
         return
@@ -214,7 +215,7 @@ buttonMultiply.addEventListener("click", function(){operatorPressed("*");});
 buttonDivide.addEventListener("click", function(){operatorPressed("/");});
 
 buttonEquals.addEventListener("click", function(){equalsPressed();});
-buttonBackspace.addEventListener("click", backspace());
+buttonBackspace.addEventListener("click", function(){backspace();});
 
 //keyboard commands
 document.addEventListener("keydown", function(event){
