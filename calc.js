@@ -293,3 +293,5 @@ document.addEventListener("keydown", function(event){
         numberPressed(9);
     }
 });
+//copied code to prevent highlight on double click
+document.addEventListener('mousedown', function (event) { if (event.detail > 1) { event.preventDefault();} }, false);
