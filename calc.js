@@ -118,8 +118,8 @@ function evaluate(inputA, inputOperator, inputB){
 
 function updateDisplay(){
     //reduces font size if string is too long
-    checkSize(firstValueString, 1);
-    checkSize(secondValueString, 2);
+    //checkSize(firstValueString, 1);
+    //checkSize(secondValueString, 2);
     //applies strings to elements
     displayLine1.textContent = firstValueString;
     displayLine2.textContent = secondValueString;
